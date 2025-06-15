@@ -1,0 +1,64 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GPA Calculator 🎓</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>📘 GPA Calculator 🎓</h1>
+
+        <form id="gpaForm" onsubmit="event.preventDefault(); addCourse();">
+            <input type="text" id="course" placeholder="Course Name" required>
+            <input type="number" id="credit" placeholder="Credit Hours" required min="1">
+            <select id="grade" required>
+                <option value="">Select Grade</option>
+                <option value="A+">A+</option>
+                <option value="A">A</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B">B</option>
+                <option value="B-">B-</option>
+                <option value="C+">C+</option>
+                <option value="C">C</option>
+                <option value="C-">C-</option>
+                <option value="D+">D+</option>
+                <option value="D">D</option>
+                <option value="F">F</option>
+            </select>
+            <button type="submit">➕ Add Course</button>
+        </form>
+
+        <section>
+            <h2>📝 Courses Added:</h2>
+            <ul id="courseList"></ul>
+            <h2 id="gpaDisplay">GPA: 0.00</h2>
+        </section>
+
+        <div class="buttons">
+            <button onclick="toggleSection('priorSemesterSection')">Toggle Prior Semester's GPA</button>
+            <button onclick="toggleSection('gpaPlanningSection')">Toggle GPA Planning Calculator</button>
+        </div>
+
+        <div id="priorSemesterSection" class="gpa-options hidden">
+            <h3>Prior Semester's GPA</h3>
+            <input type="number" id="priorGPA" placeholder="Prior Semester's GPA" step="0.01" min="0" max="4">
+            <input type="number" id="completedCredits" placeholder="Credits Completed" min="0">
+        </div>
+
+        <div id="gpaPlanningSection" class="gpa-options hidden">
+            <h3>GPA Planning Calculator</h3>
+            <input type="number" id="currentGPA" placeholder="Current GPA" step="0.01" min="0" max="4">
+            <input type="number" id="targetGPA" placeholder="Target GPA" step="0.01" min="0" max="4">
+            <input type="number" id="currentCredits" placeholder="Current Credits?" min="0">
+            <input type="number" id="additionalCredits" placeholder="Additional Credits" min="0">
+            <button onclick="calculateRequiredGPA()">Calculate Required GPA</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

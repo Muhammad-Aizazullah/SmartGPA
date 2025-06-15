@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: #1E1E2F;
+    color: #E0E6ED;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background-color: #252638;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 12px rgba(0, 0, 0, 0.4);
+    width: 100%;
+    max-width: 500px;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    margin-bottom: 15px;
+    color: #7C73F5;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+input, select {
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    font-size: 1rem;
+    background-color: #2C2F4A;
+    color: #E0E6ED;
+}
+
+input::placeholder {
+    color: #A0AEC0;
+}
+
+select {
+    background-color: #2C2F4A;
+    color: #E0E6ED;
+}
+
+button {
+    padding: 12px 15px;
+    background-color: #4F46E5;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #6366F1;
+    transform: translateY(-2px);
+}
+
+#courseList {
+    list-style: none;
+    margin-top: 10px;
+    background: #2C2F4A;
+    padding: 10px;
+    border-radius: 6px;
+    max-height: 160px;
+    overflow-y: auto;
+}
+
+#courseList li {
+    padding: 6px 0;
+    border-bottom: 1px solid #444;
+    color: #CBD5E1;
+}
+
+#gpaDisplay {
+    text-align: center;
+    font-size: 1.6rem;
+    color: #00FFAB;
+    margin-top: 15px;
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.buttons button {
+    width: 100%;
+    font-size: 1rem;
+}
+
+.gpa-options {
+    margin-top: 10px;
+    padding: 15px;
+    background: #2C2F4A;
+    border-radius: 8px;
+}
+
+.gpa-options h3 {
+    margin-top: 0;
+}
+
+.gpa-options input {
+    margin-bottom: 10px;
+    width: 100%;
+    padding: 10px;
+}
+
+.hidden {
+    display: none;
+}
